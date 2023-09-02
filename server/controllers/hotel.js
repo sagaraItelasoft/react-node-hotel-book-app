@@ -70,7 +70,7 @@ export const read = async (req, res) => {
     .populate("postedBy", "_id name")
     .select("-image.data")
     .exec();
-  console.log("SINGLE HOTEL", hotel);
+  // console.log("SINGLE HOTEL", hotel);
   res.json(hotel);
 };
 
