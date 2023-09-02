@@ -46,7 +46,11 @@ function App() {
         />
         <PrivateRoute exact path="/hotel/edit/:hotelId" component={EditHotel} />
         <Route exact path="/hotel/:hotelId" component={ViewHotel} />
-        <PrivateRoute exact path="/stripe/success" component={StripeSuccess} />
+        <PrivateRoute
+          exact
+          path="/stripe/success/:hotelId"
+          component={StripeSuccess}
+        />
         <PrivateRoute exact path="/stripe/cancel" component={StripeCancel} />
       </Switch>
     </BrowserRouter>
